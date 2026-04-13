@@ -1,12 +1,17 @@
-# Chess Pieces
+# Chess Pieces Corpus
 
-A collection of chess piece sets organized by style.
+An open, public corpus of chess piece sets organized by style.
 
-## Styles
+If you make 3D chess pieces, please submit a set. We want this repo to become a clean library of reusable styles for games, tools, and experiments.
 
-- `classic-lowpoly` (current set)
+## Submit your set
 
-## Structure
+1. Fork this repo.
+2. Create a new folder: `styles/<your-style-name>/`
+3. Add required files (see `RULESET.md`).
+4. Open a PR with a short description and preview images.
+
+## Required structure
 
 ```text
 styles/
@@ -15,13 +20,17 @@ styles/
       white/{king,queen,rook,bishop,knight,pawn}.glb
       black/{king,queen,rook,bishop,knight,pawn}.glb
     previews/{king,queen,rook,bishop,knight,pawn}.png
-    mesh_stats.json
+    README.md
 ```
 
-## Add a new style set
+## Current sets
 
-1. Create `styles/<new-style-name>/`
-2. Add `models/white` and `models/black` GLBs for all 6 piece types.
-3. Add preview PNGs and optional `mesh_stats.json`.
-4. Commit and push.
+- `classic-lowpoly`
 
+## Rules and quality bar
+
+See `RULESET.md` for naming, file format, quality, and licensing requirements.
+
+## Goal
+
+Build the best community chess set corpus on GitHub, one style at a time.
