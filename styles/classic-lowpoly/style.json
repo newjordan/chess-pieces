@@ -1,0 +1,37 @@
+{
+  "id": "classic-lowpoly",
+  "name": "Classic Lowpoly",
+  "version": "1.0.0",
+  "author": "Frosty40",
+  "license": "CC-BY 4.0",
+  "description": "Plain classic low-poly chess set.",
+  "format": "glb",
+  "pieces": ["king", "queen", "rook", "bishop", "knight", "pawn"],
+  "models": {
+    "white": {
+      "king": "models/white/king.glb",
+      "queen": "models/white/queen.glb",
+      "rook": "models/white/rook.glb",
+      "bishop": "models/white/bishop.glb",
+      "knight": "models/white/knight.glb",
+      "pawn": "models/white/pawn.glb"
+    },
+    "black": {
+      "king": "models/black/king.glb",
+      "queen": "models/black/queen.glb",
+      "rook": "models/black/rook.glb",
+      "bishop": "models/black/bishop.glb",
+      "knight": "models/black/knight.glb",
+      "pawn": "models/black/pawn.glb"
+    }
+  },
+  "previews": {
+    "king": "previews/king.png",
+    "queen": "previews/queen.png",
+    "rook": "previews/rook.png",
+    "bishop": "previews/bishop.png",
+    "knight": "previews/knight.png",
+    "pawn": "previews/pawn.png"
+  },
+  "meshStats": "mesh_stats.json"
+}

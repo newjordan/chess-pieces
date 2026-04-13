@@ -1,17 +1,17 @@
 # Chess Pieces Corpus Ruleset
 
-This file is the submission guideline for keeping the corpus clean and scalable.
+This ruleset keeps the repository public-friendly and modular at scale.
 
-## 1) Folder naming
+## 1) Style module naming
 
-- One set per folder: `styles/<style-name>/`
-- Use lowercase kebab-case for style names.
-- Keep names descriptive and unique (for example: `classic-lowpoly`, `marble-staunton`, `toon-flat`).
+- One style per folder: `styles/<style-id>/`
+- `<style-id>` must be lowercase kebab-case and unique.
 
-## 2) Required files per style
+## 2) Required files per style module
 
 ```text
-styles/<style-name>/
+styles/<style-id>/
+  style.json
   models/
     white/{king,queen,rook,bishop,knight,pawn}.glb
     black/{king,queen,rook,bishop,knight,pawn}.glb
@@ -19,54 +19,65 @@ styles/<style-name>/
   README.md
 ```
 
-All 12 model files and all 6 preview files are required.
+Optional but recommended:
+- `mesh_stats.json`
 
-## 3) Model format + orientation
+## 3) Required global index update
 
-- Format: `.glb` only.
-- Pieces should be upright, centered, and game-ready.
-- Keep transforms baked/frozen before export.
-- Keep naming exact: `king`, `queen`, `rook`, `bishop`, `knight`, `pawn`.
+Every new style PR must update `catalog.json` with:
+- `id`
+- `name`
+- `version`
+- `path`
+- `styleManifest`
+- `license`
+- `pieceFormat`
 
-## 4) Style consistency
+## 4) `style.json` minimum schema
 
-- All six pieces in a set must clearly belong to the same visual style.
-- White and black sides must read as the same style family.
-- Avoid mixing drastically different materials or rendering looks in one set.
+Each style manifest must include:
+- `id`, `name`, `version`
+- `author`, `license`, `format`
+- `pieces`
+- `models.white.*` and `models.black.*`
+- `previews.*`
 
-## 5) Quality expectations
+Paths in `style.json` must be relative to the style folder.
 
-- No broken geometry (no obvious holes, inverted faces, or exploded meshes).
-- Clean silhouette and readable piece identity.
-- If low-poly, keep topology intentional, not noisy.
+## 5) Asset format and naming
 
-## 6) Licensing
+- Model format: `.glb` only
+- Piece names must be exact:
+  - `king`, `queen`, `rook`, `bishop`, `knight`, `pawn`
+- All pieces must be upright and game-ready.
 
-- You must have rights to submit the assets.
-- Include license in the style `README.md`.
-- Preferred licenses: CC0, CC-BY 4.0, or MIT-compatible asset terms.
-- Do not submit copyrighted/IP-restricted assets without permission.
+## 6) Style consistency
 
-## 7) Style README minimum
+- A style set must read as one coherent visual family.
+- White and black must be same style family.
+- Piece identities must be clearly recognizable.
 
-Each `styles/<style-name>/README.md` must include:
+## 7) Quality floor
 
-- Style name
-- Author/contributor
-- License
-- Poly count summary (or note where to find it)
-- Notes (toolchain, generation method, or intended use)
+Rejectable issues include:
+- Broken meshes (holes, inverted normals, severe artifacts)
+- Missing required files
+- Ambiguous piece identity
+- Inconsistent naming/paths
 
-## 8) Pull request checklist
+## 8) Licensing and rights
 
-Before opening a PR:
+- Submit only assets you have the right to publish.
+- Include license in style `README.md` and `style.json`.
+- Recommended: CC0, CC-BY 4.0, or permissive terms.
 
-- [ ] Folder name is valid and unique.
-- [ ] All 12 GLBs are present with exact names.
-- [ ] All 6 preview PNGs are present with exact names.
-- [ ] Style README includes author + license.
-- [ ] Models load and piece identities are clear.
+## 9) PR checklist
 
-## 9) Maintainer policy
+- [ ] New style folder uses valid `style-id`
+- [ ] `style.json` complete and paths valid
+- [ ] 12 GLBs present (6 white + 6 black)
+- [ ] 6 previews present
+- [ ] `catalog.json` updated
+- [ ] Style README includes author/license/notes
 
-Maintainers may request fixes or reject PRs that do not follow this ruleset.
+Maintainers may request changes or reject submissions that do not follow this ruleset.

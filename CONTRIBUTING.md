@@ -1,16 +1,25 @@
 # Contributing
 
-Thanks for contributing chess sets.
+Thanks for helping build a public chess set corpus.
 
-Please follow `RULESET.md` for the canonical structure and quality requirements.
+## Contributor flow
 
-## Quick PR flow
-
-1. Fork repo
-2. Add your set under `styles/<style-name>/`
-3. Verify required files and naming
-4. Open PR with:
-   - Style name
+1. Fork the repo
+2. Create a style module at `styles/<style-id>/`
+3. Add required files (see `RULESET.md`)
+4. Update `catalog.json`
+5. Open a PR with:
+   - Style name and ID
    - License
-   - A short description of the style
-   - Any notes on poly budget/workflow
+   - Preview screenshots
+   - Notes on poly budget/toolchain
+
+## Before opening PR
+
+- Run a quick file check to confirm all required files are present.
+- Verify paths in `style.json` are correct.
+- Make sure piece identities are clear and consistent.
+
+## Source of truth
+
+`RULESET.md` is the canonical policy for submissions.

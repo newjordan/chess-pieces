@@ -1,36 +1,52 @@
 # Chess Pieces Corpus
 
-An open, public corpus of chess piece sets organized by style.
+A public, modular collection of 3D chess piece sets.
 
-If you make 3D chess pieces, please submit a set. We want this repo to become a clean library of reusable styles for games, tools, and experiments.
+This repo is designed for two audiences:
+- **Users** who want ready-to-use chess assets
+- **Contributors** who want to submit new styles
 
-## Submit your set
+## Quick use
 
-1. Fork this repo.
-2. Create a new folder: `styles/<your-style-name>/`
-3. Add required files (see `RULESET.md`).
-4. Open a PR with a short description and preview images.
+1. Open `catalog.json` to discover available styles.
+2. Pick a style folder in `styles/<style-id>/`.
+3. Use the GLBs in `models/white` and `models/black`.
 
-## Required structure
+## Public, modular layout
 
 ```text
+catalog.json
 styles/
-  <style-name>/
+  <style-id>/
+    style.json
     models/
       white/{king,queen,rook,bishop,knight,pawn}.glb
       black/{king,queen,rook,bishop,knight,pawn}.glb
     previews/{king,queen,rook,bishop,knight,pawn}.png
+    mesh_stats.json
     README.md
 ```
 
-## Current sets
+## Why this is modular
+
+- `catalog.json` is the public index of all style modules.
+- Each style has `style.json` with stable paths and metadata.
+- Consumers can ingest this corpus without scraping folder names.
+
+See `docs/MODULAR_USAGE.md` for integration guidance.
+
+## Submit your set
+
+Please read:
+- `CONTRIBUTING.md`
+- `RULESET.md`
+
+Then open a PR with your new style module under `styles/`.
+
+## Current styles
 
 - `classic-lowpoly`
 
-## Rules and quality bar
-
-See `RULESET.md` for naming, file format, quality, and licensing requirements.
-
 ## Goal
 
-Build the best community chess set corpus on GitHub, one style at a time.
+Build an open, clean, long-term chess style corpus that is easy to consume and easy to extend.
