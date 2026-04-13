@@ -35,6 +35,10 @@ styles/
 
 See `docs/MODULAR_USAGE.md` for integration guidance.
 
+## Attribution
+
+External-source attribution records live in `docs/ATTRIBUTION.md`.
+
 ## Submit your set
 
 Please read:
