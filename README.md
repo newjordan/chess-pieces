@@ -50,6 +50,7 @@ Then open a PR with your new style module under `styles/`.
 ## Current styles
 
 - `classic-lowpoly`
+- `ai-triposr-v1`
 
 ## Goal
 

@@ -9,7 +9,25 @@
       "path": "styles/classic-lowpoly",
       "styleManifest": "styles/classic-lowpoly/style.json",
       "license": "CC-BY 4.0",
-      "tags": ["classic", "lowpoly", "staunton"],
+      "tags": [
+        "classic",
+        "lowpoly",
+        "staunton"
+      ],
+      "pieceFormat": "glb"
+    },
+    {
+      "id": "ai-triposr-v1",
+      "name": "AI TripoSR v1",
+      "version": "1.0.0",
+      "path": "styles/ai-triposr-v1",
+      "styleManifest": "styles/ai-triposr-v1/style.json",
+      "license": "CC-BY 4.0",
+      "tags": [
+        "ai-generated",
+        "triposr",
+        "concept"
+      ],
       "pieceFormat": "glb"
     }
   ]

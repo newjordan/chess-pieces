@@ -1,0 +1,26 @@
+{
+  "king": {
+    "vertices": 32308,
+    "faces": 64612
+  },
+  "queen": {
+    "vertices": 44834,
+    "faces": 89656
+  },
+  "rook": {
+    "vertices": 41186,
+    "faces": 82368
+  },
+  "bishop": {
+    "vertices": 30270,
+    "faces": 60532
+  },
+  "knight": {
+    "vertices": 71012,
+    "faces": 142020
+  },
+  "pawn": {
+    "vertices": 36070,
+    "faces": 72136
+  }
+}
