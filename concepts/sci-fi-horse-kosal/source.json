@@ -1,0 +1,20 @@
+{
+  "id": "sci-fi-horse-kosal",
+  "name": "Sci-Fi Horse Kosal Concept",
+  "type": "single-piece-svg-concept",
+  "piece": "knight",
+  "sourceProject": "chess_svg_library",
+  "sourceAsset": "library/final_12/knight/white.svg",
+  "sourceProvider": "deverac-piece-packager",
+  "sourceSet": "kosal",
+  "sourceLicense": "GPL-2.0",
+  "derivedFromExperiment": {
+    "gallery": "library/horse_concepts/20260424-201211/index.html",
+    "morphPrototype": "library/horse_concepts/20260424-201211/morph_construct_to_final_knight.svg",
+    "note": "The 30 sci-fi horse concepts were shader treatments over this same knight silhouette."
+  },
+  "files": {
+    "mono": "horse-mono.svg",
+    "lineart": "horse-lineart.svg"
+  }
+}
