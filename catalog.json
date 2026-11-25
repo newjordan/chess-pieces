@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "schemaVersion": "1.1.0",
   "repo": "newjordan/chess-pieces",
   "styles": [
     {
@@ -9,6 +9,7 @@
       "path": "styles/classic-lowpoly",
       "styleManifest": "styles/classic-lowpoly/style.json",
       "license": "CC-BY 4.0",
+      "shading": "flat",
       "tags": [
         "classic",
         "lowpoly",
@@ -23,6 +24,7 @@
       "path": "styles/ai-triposr-v1",
       "styleManifest": "styles/ai-triposr-v1/style.json",
       "license": "CC-BY 4.0",
+      "shading": "smooth",
       "tags": [
         "ai-generated",
         "triposr",

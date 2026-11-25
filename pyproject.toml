@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.33"]
+build-backend = "hatchling.build"
+
+[project]
+name = "chesscorpus"
+version = "1.1.0"
+description = "Validate, normalize, and preview the chess piece corpus."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "CC-BY-4.0"
+dependencies = [
+    "numpy>=2.5.5",
+    "pillow>=12",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.2",
+    "ruff>=0.17.6",
+]
+
+[project.scripts]
+chesscorpus = "chesscorpus.__main__:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/chesscorpus"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

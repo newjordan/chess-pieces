@@ -6,6 +6,13 @@
   "license": "CC-BY 4.0",
   "description": "Plain classic low-poly chess set.",
   "format": "glb",
+  "shading": "flat",
+  "orientation": {
+    "upAxis": "+Y",
+    "base": "y=0",
+    "center": "xz",
+    "facing": "-Z"
+  },
   "pieces": ["king", "queen", "rook", "bishop", "knight", "pawn"],
   "models": {
     "white": {

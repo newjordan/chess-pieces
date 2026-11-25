@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chess Pieces Corpus</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.187.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.187.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="mast">
+      <div class="mast-copy">
+        <p class="eyebrow">Public module index</p>
+        <h1>Chess Pieces</h1>
+        <p class="lede">
+          Game-ready GLB sets. Every piece stands on y = 0, faces down −Z, and
+          carries its own ivory or ebony material.
+        </p>
+      </div>
+      <p class="license">CC BY 4.0</p>
+    </header>
+
+    <main>
+      <div id="styles" class="styles" role="tablist" aria-label="Styles"></div>
+      <section class="stage" aria-label="Piece viewer">
+        <div class="viewport">
+          <canvas id="view" aria-label="3D piece preview"></canvas>
+          <p id="view-status" class="view-status">Loading the catalog…</p>
+        </div>
+        <div class="inspector">
+          <div class="side-toggle" role="group" aria-label="Side">
+            <button type="button" id="side-white" aria-pressed="true">White</button>
+            <button type="button" id="side-black" aria-pressed="false">Black</button>
+          </div>
+          <h2 id="piece-name">Piece</h2>
+          <dl id="stats" class="stats"></dl>
+          <p id="style-note" class="note"></p>
+        </div>
+      </section>
+      <div id="pieces" class="pieces" role="list"></div>
+    </main>
+
+    <footer>
+      <p>
+        Serve this folder from the repository root so the page can read
+        <code>catalog.json</code>. The 3D view loads three.js from a CDN; the
+        stills below it do not.
+      </p>
+    </footer>
+    <script type="module" src="./viewer.js"></script>
+  </body>
+</html>
