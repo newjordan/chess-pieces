@@ -18,4 +18,4 @@ This registry records required credits for externally sourced assets used or sta
 
 ### Status
 
-Selected as the winner source page for extraction/import work; style-module import is still in progress.
+Selected as the winner source page for extraction/import work. Style-module import is still in progress. This model is not an entry in `catalog.json`. The shipped `classic-lowpoly` and `ai-triposr-v1` modules are separate, and each names its author in `style.json`.

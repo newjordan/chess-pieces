@@ -1,26 +1,50 @@
 {
   "king": {
     "vertices": 32308,
-    "faces": 64612
+    "faces": 64612,
+    "uniquePositions": 32288,
+    "height": 0.9997,
+    "width": 0.4034,
+    "depth": 0.4501
   },
   "queen": {
     "vertices": 44834,
-    "faces": 89656
+    "faces": 89656,
+    "uniquePositions": 44804,
+    "height": 1.0337,
+    "width": 0.458,
+    "depth": 0.5475
   },
   "rook": {
     "vertices": 41186,
-    "faces": 82368
+    "faces": 82368,
+    "uniquePositions": 41166,
+    "height": 1.0187,
+    "width": 0.4687,
+    "depth": 0.478
   },
   "bishop": {
     "vertices": 30270,
-    "faces": 60532
+    "faces": 60532,
+    "uniquePositions": 30262,
+    "height": 0.9209,
+    "width": 0.4017,
+    "depth": 0.5184
   },
   "knight": {
     "vertices": 71012,
-    "faces": 142020
+    "faces": 142020,
+    "uniquePositions": 70981,
+    "height": 1.015,
+    "width": 0.6326,
+    "depth": 0.7697
   },
   "pawn": {
     "vertices": 36070,
-    "faces": 72136
+    "faces": 72136,
+    "uniquePositions": 36049,
+    "height": 1.0225,
+    "width": 0.4682,
+    "depth": 0.5079
   }
 }
